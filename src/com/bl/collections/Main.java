@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-   // we create an object from the ArrayList named contact.
+    // we create an object from the ArrayList named contact.
     static ArrayList<PersonDetails> contact = new ArrayList<PersonDetails>();
     public static Scanner scanner = new Scanner(System.in);
     static int menu;
@@ -58,13 +58,17 @@ public class Main {
 
                 case 2:
                     System.out.println("Enter First Name of contact that you would like to edit: ");
-                    // Character input
                     addPersonDetail.editContact(contact);
+                    break;
+
+                case 3:
+                    addPersonDetail.deleteContact(contact);
                     break;
 
                 default:
                     System.out.println("Please choose a valid contact details");
                     break;
+
             }
             //for loop use to print the data after add aur edit.
             for (int i = 0; i < contact.size(); i++)
